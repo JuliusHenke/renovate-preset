@@ -5,8 +5,6 @@
   "schedule": [
     "every weekend"
   ],
-  "optimizeForDisabled": true,
-  "automerge": false,
   "baseBranches": [
     "dev"
   ],
@@ -22,6 +20,7 @@
   "prHourlyLimit": 10,
   "prConcurrentLimit": 20,
   "branchConcurrentLimit": 20,
+  "automerge": false,
   "rebaseWhen": "behind-base-branch",
   "prCreation": "immediate",
   "stabilityDays": 7,
