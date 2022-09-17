@@ -8,7 +8,6 @@
   "optimizeForDisabled": true,
   "automerge": false,
   "baseBranches": [
-    "development",
     "dev"
   ],
   "labels": [
