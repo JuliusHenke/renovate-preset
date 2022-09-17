@@ -48,10 +48,6 @@
       "description": "Group major dev updates",
       "groupName": "major-dev",
       "prPriority": 0,
-      "excludePackagePatterns": [
-        "mongo",
-        "graphql"
-      ],
       "matchDepTypes": [
         "devDependencies"
       ],
