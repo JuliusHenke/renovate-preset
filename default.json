@@ -42,7 +42,7 @@
         "pin",
         "digest"
       ],
-      "matchCurrentVersion": ">=1.0.0"
+      "matchCurrentVersion": "/^v?[^0].*/"
     },
     {
       "description": "Group major dev updates",
