@@ -1,0 +1,71 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": "config:base",
+  "timezone": "Europe/Berlin",
+  "schedule": [
+    "before 9am on Saturday"
+  ],
+  "optimizeForDisabled": true,
+  "automerge": false,
+  "baseBranches": [
+    "development",
+    "dev"
+  ],
+  "labels": [
+    "renovate"
+  ],
+  "onboarding": true,
+  "onboardingConfig": {
+    "extends": [
+      "config:base"
+    ]
+  },
+  "prHourlyLimit": 10,
+  "prConcurrentLimit": 20,
+  "branchConcurrentLimit": 20,
+  "rebaseWhen": "behind-base-branch",
+  "prCreation": "immediate",
+  "stabilityDays": 7,
+  "internalChecksFilter": "strict",
+  "assignees": [
+    "JuliusHenke"
+  ],
+  "packageRules": [
+    {
+      "description": "Group non-major updates",
+      "groupName": "non-major",
+      "prPriority": 1,
+      "stabilityDays": 3,
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "matchCurrentVersion": ">=1.0.0"
+    },
+    {
+      "description": "Group major dev updates",
+      "groupName": "major-dev",
+      "prPriority": 0,
+      "excludePackagePatterns": [
+        "mongo",
+        "graphql"
+      ],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    },
+    {
+      "description": "Only update node to active LTS versions",
+      "matchPackageNames": [
+        "node",
+        "@types/node"
+      ],
+      "allowedVersions": "/^16/"
+    }
+  ]
+}
