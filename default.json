@@ -3,7 +3,7 @@
   "extends": "config:base",
   "timezone": "Europe/Berlin",
   "schedule": [
-    "before 9am on Saturday"
+    "every weekend"
   ],
   "optimizeForDisabled": true,
   "automerge": false,
