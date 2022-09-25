@@ -22,7 +22,7 @@
   "branchConcurrentLimit": 20,
   "automerge": false,
   "rebaseWhen": "behind-base-branch",
-  "prCreation": "immediate",
+  "prCreation": "not-pending",
   "stabilityDays": 7,
   "internalChecksFilter": "strict",
   "assignees": [
