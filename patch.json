@@ -1,0 +1,16 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "groupName": "patch",
+  "prPriority": 1,
+  "stabilityDays": 3,
+  "matchUpdateTypes": [
+    "patch",
+    "pin",
+    "pinDigest",
+    "digest"
+  ],
+  "includePaths": [
+    "frontend"
+  ],
+  "automerge": true
+}

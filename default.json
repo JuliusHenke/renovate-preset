@@ -3,7 +3,7 @@
   "extends": "config:base",
   "timezone": "Europe/Berlin",
   "schedule": [
-    "before 3am on saturday",
+    "before 8am on saturday"
   ],
   "baseBranches": [
     "dev"
@@ -18,8 +18,8 @@
     ]
   },
   "prHourlyLimit": 10,
-  "prConcurrentLimit": 20,
-  "branchConcurrentLimit": 20,
+  "prConcurrentLimit": 10,
+  "branchConcurrentLimit": 10,
   "automerge": false,
   "rebaseWhen": "behind-base-branch",
   "prCreation": "not-pending",
@@ -30,27 +30,63 @@
   ],
   "packageRules": [
     {
-      "description": "Group non-major updates",
-      "groupName": "non-major",
-      "prPriority": 1,
-      "stabilityDays": 3,
-      "matchUpdateTypes": [
-        "minor",
-        "patch",
-        "pin",
-        "digest"
+      "groupName": "patch",
+      "ignorePaths": [
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/frontend/**",
+        "**/backend/**"
       ],
-      "matchCurrentVersion": "/^v?[^0].*/"
+      "extends": [
+        "github>juliushenke/renovate-preset:patch.json"
+      ]
     },
     {
-      "description": "Group major dev updates",
-      "groupName": "major-dev",
-      "prPriority": 0,
-      "matchDepTypes": [
-        "devDependencies"
+      "groupName": "frontend-patch",
+      "includePaths": [
+        "**/frontend/**"
       ],
-      "matchUpdateTypes": [
-        "major"
+      "extends": [
+        "github>juliushenke/renovate-preset:patch.json"
+      ]
+    },
+    {
+      "groupName": "backend-patch",
+      "includePaths": [
+        "**/backend/**"
+      ],
+      "extends": [
+        "github>juliushenke/renovate-preset:patch.json"
+      ]
+    },
+    {
+      "groupName": "minor",
+      "ignorePaths": [
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/frontend/**",
+        "**/backend/**"
+      ],
+      "extends": [
+        "github>juliushenke/renovate-preset:minor.json"
+      ]
+    },
+    {
+      "groupName": "frontend-minor",
+      "includePaths": [
+        "**/frontend/**"
+      ],
+      "extends": [
+        "github>juliushenke/renovate-preset:minor.json"
+      ]
+    },
+    {
+      "groupName": "backend-minor",
+      "includePaths": [
+        "**/backend/**"
+      ],
+      "extends": [
+        "github>juliushenke/renovate-preset:minor.json"
       ]
     },
     {

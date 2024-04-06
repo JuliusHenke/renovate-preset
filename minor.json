@@ -1,0 +1,10 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "groupName": "minor",
+  "prPriority": 1,
+  "stabilityDays": 3,
+  "matchUpdateTypes": [
+    "minor"
+  ],
+  "matchCurrentVersion": "/^v?[^0].*/"
+}
