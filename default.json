@@ -3,7 +3,7 @@
   "extends": "config:base",
   "timezone": "Europe/Berlin",
   "schedule": [
-    "before 8am on saturday"
+    "before 8am every weekend"
   ],
   "baseBranches": [
     "dev"
