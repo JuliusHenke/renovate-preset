@@ -31,62 +31,62 @@
   "packageRules": [
     {
       "groupName": "patch",
+      "extends": [
+        "github>juliushenke/renovate-preset:patch.json"
+      ],
       "ignorePaths": [
         "**/node_modules/**",
         "**/bower_components/**",
         "**/frontend/**",
         "**/backend/**"
-      ],
-      "extends": [
-        "github>juliushenke/renovate-preset:patch.json"
       ]
     },
     {
       "groupName": "frontend-patch",
-      "includePaths": [
-        "**/frontend/**"
-      ],
       "extends": [
         "github>juliushenke/renovate-preset:patch.json"
+      ],
+      "includePaths": [
+        "**/frontend/**"
       ]
     },
     {
       "groupName": "backend-patch",
-      "includePaths": [
-        "**/backend/**"
-      ],
       "extends": [
         "github>juliushenke/renovate-preset:patch.json"
+      ],
+      "includePaths": [
+        "**/backend/**"
       ]
     },
     {
       "groupName": "minor",
+      "extends": [
+        "github>juliushenke/renovate-preset:minor.json"
+      ],
       "ignorePaths": [
         "**/node_modules/**",
         "**/bower_components/**",
         "**/frontend/**",
         "**/backend/**"
-      ],
-      "extends": [
-        "github>juliushenke/renovate-preset:minor.json"
       ]
     },
     {
       "groupName": "frontend-minor",
-      "includePaths": [
-        "**/frontend/**"
-      ],
       "extends": [
         "github>juliushenke/renovate-preset:minor.json"
+      ],
+      "includePaths": [
+        "**/frontend/**"
       ]
     },
     {
       "groupName": "backend-minor",
-      "includePaths": [
-        "**/backend/**"
-      ],
       "extends": [
         "github>juliushenke/renovate-preset:minor.json"
+      ],
+      "includePaths": [
+        "**/backend/**"
       ]
     },
     {
