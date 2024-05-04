@@ -8,5 +8,8 @@
     "pinDigest",
     "digest"
   ],
-  "automerge": true
+  "automerge": true,
+  "assignees": [
+    "renovate-bot"
+  ]
 }
