@@ -1,0 +1,14 @@
+{
+  "name": "renovate-preset",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "renovate-config-validator default.json"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "dependencies": {
+    "renovate": "^44.39.2"
+  }
+}

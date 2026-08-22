@@ -18,3 +18,9 @@ It can be used in your repository by referencing it in a `renovate.json` file:
 }
 ```
 All configuration from the preset can be overriden or combined with new configuration. Learn more about it in the [official docs](https://docs.renovatebot.com/key-concepts/presets/).
+
+## Validate renovate config locally
+Install [bun](https://bun.sh). Copy `.env.sample` to `.env` and put `RENOVATE_GITHUB_COM_TOKEN` read-only token. Then run:
+```shell
+bun --env-file=.env run lint
+```
