@@ -1,9 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": "config:best-practices",
+  "extends": [
+    "config:best-practices"
+  ],
   "timezone": "Europe/Berlin",
   "schedule": [
-    "before 8am every saturday"
+    "before 8am on saturday"
   ],
   "labels": [
     "renovate"
@@ -21,7 +23,7 @@
   "automerge": false,
   "rebaseWhen": "behind-base-branch",
   "prCreation": "not-pending",
-  "minimumReleaseAge": 7,
+  "minimumReleaseAge": "7 days",
   "internalChecksFilter": "strict",
   "assignees": [
     "JuliusHenke"
@@ -81,7 +83,7 @@
         "node",
         "@types/node"
       ],
-      "allowedVersions": "<=22"
+      "allowedVersions": "<=24"
     }
   ]
 }
