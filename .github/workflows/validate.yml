@@ -3,10 +3,8 @@ name: validate
 on:
   push:
     branches:
-      - "*"
+      - main
   pull_request:
-    branches:
-      - "*"
 
 jobs:
   validate_config:
@@ -20,5 +18,5 @@ jobs:
 
       - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
       - run: |
-          bun install
+          bun install --frozen-lockfile
           bun lint

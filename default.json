@@ -10,13 +10,6 @@
   "labels": [
     "renovate"
   ],
-  "onboarding": true,
-  "onboardingConfig": {
-      "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-      "extends": [
-        "github>juliushenke/renovate-preset"
-      ]
-  },
   "prHourlyLimit": 10,
   "prConcurrentLimit": 10,
   "branchConcurrentLimit": 10,
@@ -28,62 +21,94 @@
   "assignees": [
     "JuliusHenke"
   ],
+  "vulnerabilityAlerts": {
+    "labels": [
+      "security"
+    ]
+  },
   "packageRules": [
     {
       "groupName": "patch",
       "extends": [
-        "github>juliushenke/renovate-preset:patch.json"
+        "./patch"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "pin",
+        "pinDigest",
+        "digest"
       ]
     },
     {
       "groupName": "frontend-patch",
       "extends": [
-        "github>juliushenke/renovate-preset:patch.json"
+        "./patch"
       ],
       "matchFileNames": [
         "**/frontend/**"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "pin",
+        "pinDigest",
+        "digest"
       ]
     },
     {
       "groupName": "backend-patch",
       "extends": [
-        "github>juliushenke/renovate-preset:patch.json"
+        "./patch"
       ],
       "matchFileNames": [
         "**/backend/**"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "pin",
+        "pinDigest",
+        "digest"
       ]
     },
     {
       "groupName": "minor",
       "extends": [
-        "github>juliushenke/renovate-preset:minor.json"
+        "./minor"
+      ],
+      "matchUpdateTypes": [
+        "minor"
       ]
     },
     {
       "groupName": "frontend-minor",
       "extends": [
-        "github>juliushenke/renovate-preset:minor.json"
+        "./minor"
       ],
       "matchFileNames": [
         "**/frontend/**"
+      ],
+      "matchUpdateTypes": [
+        "minor"
       ]
     },
     {
       "groupName": "backend-minor",
       "extends": [
-        "github>juliushenke/renovate-preset:minor.json"
+        "./minor"
       ],
       "matchFileNames": [
         "**/backend/**"
+      ],
+      "matchUpdateTypes": [
+        "minor"
       ]
     },
     {
-      "description": "Only update node to active LTS versions",
-      "matchPackageNames": [
+      "description": "Only update Node.js to LTS majors",
+      "matchDepNames": [
         "node",
         "@types/node"
       ],
-      "allowedVersions": "<=24"
+      "allowedVersions": "<=26"
     },
     {
       "description": "Label patch updates",
