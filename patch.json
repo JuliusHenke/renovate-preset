@@ -1,15 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "prPriority": 1,
-  "minimumReleaseAge": "3 days",
+  "minimumReleaseAge": "7 days",
   "matchUpdateTypes": [
     "patch",
     "pin",
     "pinDigest",
     "digest"
   ],
-  "automerge": true,
-  "assignees": [
-    "renovate-bot"
-  ]
+  "automerge": true
 }

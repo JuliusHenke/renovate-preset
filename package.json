@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "lint": "renovate-config-validator default.json"
+    "lint": "bun scripts/lint.ts"
   },
   "dependencies": {
     "renovate": "^44.39.2"
