@@ -111,6 +111,69 @@
       "addLabels": [
         "renovate major"
       ]
+    },
+    {
+      "description": "Label pin updates",
+      "matchUpdateTypes": [
+        "pin"
+      ],
+      "addLabels": [
+        "renovate pin"
+      ]
+    },
+    {
+      "description": "Label digest updates",
+      "matchUpdateTypes": [
+        "digest"
+      ],
+      "addLabels": [
+        "renovate digest"
+      ]
+    },
+    {
+      "description": "Label pin digest updates",
+      "matchUpdateTypes": [
+        "pinDigest"
+      ],
+      "addLabels": [
+        "renovate pin digest"
+      ]
+    },
+    {
+      "description": "Label lock file maintenance updates",
+      "matchUpdateTypes": [
+        "lockFileMaintenance"
+      ],
+      "addLabels": [
+        "renovate lock file maintenance"
+      ]
+    },
+    {
+      "description": "Label rollback updates",
+      "matchUpdateTypes": [
+        "rollback"
+      ],
+      "addLabels": [
+        "renovate rollback"
+      ]
+    },
+    {
+      "description": "Label replacement updates",
+      "matchUpdateTypes": [
+        "replacement"
+      ],
+      "addLabels": [
+        "renovate replacement"
+      ]
+    },
+    {
+      "description": "Label bump updates",
+      "matchUpdateTypes": [
+        "bump"
+      ],
+      "addLabels": [
+        "renovate bump"
+      ]
     }
   ]
 }
