@@ -84,6 +84,33 @@
         "@types/node"
       ],
       "allowedVersions": "<=24"
+    },
+    {
+      "description": "Label patch updates",
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "addLabels": [
+        "renovate patch"
+      ]
+    },
+    {
+      "description": "Label minor updates",
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "addLabels": [
+        "renovate minor"
+      ]
+    },
+    {
+      "description": "Label major updates",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "addLabels": [
+        "renovate major"
+      ]
     }
   ]
 }
