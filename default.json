@@ -103,13 +103,6 @@
       ]
     },
     {
-      "description": "Patch updates only wait 3 days (pin and digest updates keep the 7-day wait)",
-      "matchUpdateTypes": [
-        "patch"
-      ],
-      "minimumReleaseAge": "3 days"
-    },
-    {
       "description": "Only update Node.js to LTS majors",
       "matchDepNames": [
         "node",
