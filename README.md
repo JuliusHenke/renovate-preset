@@ -6,7 +6,7 @@ It includes:
 - `config:best-practices` from Renovate
 - weekend schedule based on Europe/Berlin time
 - pull request limits
-- minimum release age for updates: 7 days by default and for automerged updates, 3 days for minor updates (security fixes are never delayed)
+- minimum release age for updates: 3 days for patch, pin, digest and minor updates, 7 days for everything else (security fixes are never delayed)
 - grouping of patch and minor updates, split into `frontend` and `backend` when the files live in those folders
 - automerge for patch, pin and digest updates
 - Node.js and `@types/node` limited to LTS majors
