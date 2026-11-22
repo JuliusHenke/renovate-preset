@@ -103,6 +103,17 @@
       ]
     },
     {
+      "description": "Docker digest updates skip the minimum release age: Docker Hub restarts the age on every re-push of a tag, and other registries report no release time, so the updates would otherwise be held indefinitely. Version updates of Docker images keep their release age.",
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchUpdateTypes": [
+        "digest",
+        "pinDigest"
+      ],
+      "minimumReleaseAge": "0 days"
+    },
+    {
       "description": "Only update Node.js to LTS majors",
       "matchDepNames": [
         "node",
